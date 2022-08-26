@@ -1,0 +1,17 @@
+# management.endpoints.web.exposure.include: *
+
+spring:
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:iplist.sqlite
+  # profiles:
+    # active: dev
+  jpa:
+    # show-sql: true
+    database-platform: com.example.storeIp.dao.config.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+
+server:
+  port: 8080
